@@ -110,7 +110,6 @@ function clearMarkup() {
   refs.gallery.innerHTML = '';
 }
 
-// refs.loadBtn.classList.add('hide');
 
 refs.loadBtn.addEventListener('click', onLoadMoreClick);
 
