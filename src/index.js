@@ -94,17 +94,19 @@ function onFormSubmit(evt) {
     );
     return;
   }
-  if (evt.type === 'click') {
-    const { height: cardHeight } = document
-      .querySelector('.gallery')
-      .firstElementChild.getBoundingClientRect();
-
-    window.scrollBy({
-      top: cardHeight * 2,
-      behavior: 'smooth',
-    });
-  }
 }
+
+window.addEventListener('scroll', () => {
+  const { height: cardHeight } = document
+  .querySelector(".gallery")
+  .firstElementChild.getBoundingClientRect();
+
+window.scrollBy({
+  top: cardHeight / 80,
+  // behavior: "smooth",
+});
+})
+
 
 function clearMarkup() {
   refs.gallery.innerHTML = '';
@@ -128,7 +130,6 @@ async function generateMarkup(search) {
 
   const lightbox = new SimpleLightbox('.gallery a', {});
   refs.gallery.insertAdjacentHTML('beforeend', markup);
-
 
   lightbox.refresh();
   return data;
