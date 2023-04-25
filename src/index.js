@@ -96,16 +96,16 @@ function onFormSubmit(evt) {
   }
 }
 
-window.addEventListener('scroll', () => {
-  const { height: cardHeight } = document
-  .querySelector(".gallery")
-  .firstElementChild.getBoundingClientRect();
+// window.addEventListener('scroll', () => {
+//   const { height: cardHeight } = document
+//   .querySelector(".gallery")
+//   .firstElementChild.getBoundingClientRect();
 
-window.scrollBy({
-  top: cardHeight / 80,
-  // behavior: "smooth",
-});
-})
+// window.scrollBy({
+//   top: cardHeight / 80,
+//   // behavior: "smooth",
+// });
+// })
 
 
 function clearMarkup() {
